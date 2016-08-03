@@ -7,4 +7,4 @@
     1.开源的
     2.基于c++、Qt、OpenGL
     
-    [公司网址](http:\\www.bjdclw.com)
+    [公司网址](http://www.bjdclw.com/)
