@@ -68,6 +68,9 @@ QThreadpool、 boost、[simple thread pool](https://github.com/progschj/ThreadPo
 [tensorflow](https://github.com/tensorflow/tensorflow)  
 [tensorflow exam](https://github.com/hzy46/Deep-Learning-21-Examples)  
 ## 切片库
-[entwine](https://entwine.io/)
+[entwine](https://entwine.io/)  
+[lastool]()  
+## 公开数据  
+[dronemapper](https://dronemapper.com/sample_data)  
 
 
