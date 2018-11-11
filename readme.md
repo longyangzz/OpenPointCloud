@@ -56,7 +56,7 @@ osgjs、cesium、optree、threejs、OpenSfM
 [OpenSfM is a Structure from Motion library written in Python](https://github.com/mapillary/OpenSfM/blob/master/README.md)  
 [potree.entwine.io](https://github.com/connormanning/potree.entwine.io)  
 ## 客户端引擎
-cloudcompare、meshlab、visualiabary、vtk、osg、鬼火  
+cloudcompare、meshlab、visualiabary、vtk、osg、鬼火、DC-Points    
 [osg框架设计](https://stackedboxes.org/2010/05/05/osg-part-2-statesets/)  
 ## cad & gis 
 opencascad 、freecad、qcad、teigha、QGis 
