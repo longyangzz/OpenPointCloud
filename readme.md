@@ -20,7 +20,8 @@
 ## VIEW
 ----------------
 1、 学习opengl是怎么实现数据渲染的   
-[openGL](https://github.com/McNopper/OpenGL)  
+[openGL+GLSL](https://github.com/McNopper/OpenGL)  
+[lighthouse3d](http://www.lighthouse3d.com/tutorials/glsl-tutorial/glsl-core-tutorial-index/)  
 2、 矩阵运算库  
 [GLM](https://github.com/g-truc/glm)  实现矩阵运算  
 ```cpp
