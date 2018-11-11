@@ -22,6 +22,8 @@
 1、 学习opengl是怎么实现数据渲染的   
 [openGL+GLSL](https://github.com/McNopper/OpenGL)  
 [lighthouse3d](http://www.lighthouse3d.com/tutorials/glsl-tutorial/glsl-core-tutorial-index/)  
+[中文GL](http://www.noie.name/tutorials/)  
+[初级中级高级GL教程](http://www.opengl-tutorial.org/)   
 2、 矩阵运算库  
 [GLM](https://github.com/g-truc/glm)  实现矩阵运算  
 ```cpp
@@ -47,10 +49,14 @@ glm::mat4 camera(float Translate, glm::vec2 const& Rotate)
 # 技术资料参考
 ## 算法库
 pcl、cgal、gdal、pdal、geos    
+[Convert massive pointcloud](https://github.com/NLeSC/Massive-PotreeConverter)   
 ## web引擎 
-osgjs、cesium、optree、threejs  
+osgjs、cesium、optree、threejs、OpenSfM   
+[Webgl pointcloud visualization of the Via Appia based on potree](https://github.com/NLeSC/PattyVis)  
+[OpenSfM is a Structure from Motion library written in Python](https://github.com/mapillary/OpenSfM/blob/master/README.md)
 ## 客户端引擎
 cloudcompare、meshlab、visualiabary、vtk、osg、鬼火  
+[osg框架设计](https://stackedboxes.org/2010/05/05/osg-part-2-statesets/)  
 ## cad & gis 
 opencascad 、freecad、qcad、teigha、QGis 
 ## UI
