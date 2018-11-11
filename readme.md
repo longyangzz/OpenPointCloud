@@ -1,6 +1,6 @@
 # 点云数据处理  
 --------------
-这是一个基于激光雷达设备数据进行处理的，点云浏览分析软件。一步步记录自己的搭建过程，最终基于opengGL、c++、Qt搭建
+学习记录开源的资料，学习搭建基于激光雷达设备数据的点云浏览分析软件。一步步记录自己的搭建过程，基于opengGL、c++、Qt搭建
 三维可视化引擎，同时基于webgl、js搭建web数据服务引擎   
     
 ## 主要思路
@@ -54,5 +54,10 @@ cloudcompare、meshlab、visualiabary、vtk、osg、鬼火
 opencascad 、freecad、qcad、teigha、QGis 
 ## UI
 Qt
+## 线程  
+QThreadpool、 boost、[simple thread pool](https://github.com/progschj/ThreadPool)  
+## 深度学习
+[tensorflow](https://github.com/tensorflow/tensorflow)  
+[tensorflow exam](https://github.com/hzy46/Deep-Learning-21-Examples)  
 
 
