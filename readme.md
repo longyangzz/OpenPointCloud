@@ -53,7 +53,8 @@ pcl、cgal、gdal、pdal、geos
 ## web引擎 
 osgjs、cesium、optree、threejs、OpenSfM   
 [Webgl pointcloud visualization of the Via Appia based on potree](https://github.com/NLeSC/PattyVis)  
-[OpenSfM is a Structure from Motion library written in Python](https://github.com/mapillary/OpenSfM/blob/master/README.md)
+[OpenSfM is a Structure from Motion library written in Python](https://github.com/mapillary/OpenSfM/blob/master/README.md)  
+[potree.entwine.io](https://github.com/connormanning/potree.entwine.io)  
 ## 客户端引擎
 cloudcompare、meshlab、visualiabary、vtk、osg、鬼火  
 [osg框架设计](https://stackedboxes.org/2010/05/05/osg-part-2-statesets/)  
@@ -66,5 +67,7 @@ QThreadpool、 boost、[simple thread pool](https://github.com/progschj/ThreadPo
 ## 深度学习
 [tensorflow](https://github.com/tensorflow/tensorflow)  
 [tensorflow exam](https://github.com/hzy46/Deep-Learning-21-Examples)  
+## 切片库
+[entwine](https://entwine.io/)
 
 
