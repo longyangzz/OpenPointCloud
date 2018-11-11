@@ -8,7 +8,7 @@
 1、 UI界面通过Qt + xml | sqlite 配置文件搭建  
 2、 VIEW可视化引擎基于opengl + glsl + qt，参考osg实现，支持shader的配置、漫游器的定义、操作器的定义  
 3、 IO可视化引擎其实就是显示数据的，为了便于数据格式的支持，通过IO插件模式设计   
-4、 MODULE，IO加载数据，VIEW可视化，UI提供交互，目标是做行业应用，通过插件模块化设计（Qt），扩展无限的ToolBox，  
+4、 MODULE，IO加载数据，VIEW可视化，UI提供交互，目标是做行业应用，通过插件模块化设计（Qt）支持c++和python，扩展ToolBox，  
     为了支持对切片数据的处理，toolbox的数据处理主要是针对原始文件，将结果切片可视化  
 5、 TOOL，为了支持海量数据，需要将原始数据切片，所有IO支持的数据格式，可以使用系统的TOOL工具进行快速切片，以可视化
 
@@ -42,5 +42,17 @@ glm::mat4 camera(float Translate, glm::vec2 const& Rotate)
 }
 ```
 [VCGlib](https://github.com/cnr-isti-vclab/vcglib)  网格数据结构， meshlab使用此库   
+
+# 技术资料参考
+## 算法库
+pcl、cgal、gdal、pdal、geos    
+## web引擎 
+osgjs、cesium、optree、threejs  
+## 客户端引擎
+cloudcompare、meshlab、visualiabary、vtk、osg、鬼火  
+## cad & gis 
+opencascad 、freecad、qcad、teigha、QGis 
+## UI
+Qt
 
 
