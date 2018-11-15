@@ -13,6 +13,7 @@ FOREACH( mylibfolder
       	plugins
       	DCGui
       	DCConsole
+      	TileSplit
     )
 
     ADD_SUBDIRECTORY(${mylibfolder})

@@ -103,6 +103,7 @@ INCLUDE(OpenPointCloudMacroUtils)
 
 
 
+
 ################################################################################
 # Installation stuff
 
@@ -209,11 +210,12 @@ ENDIF(BUILD_OpenPointCloud_APPLICATIONS)
 OPTION(BUILD_OpenPointCloud_EXAMPLES "Enable to build OpenPointCloud Examples" OFF)
 
 # tools
-#ADD_SUBDIRECTORY(tools)
+ADD_SUBDIRECTORY(tools)
 
 ################################################################################
 # 3rd Party Dependency Stuff
 IF(WIN32 AND NOT ANDROID)
     INCLUDE(Find3rdPartyDependencies)
 ENDIF()
+
 

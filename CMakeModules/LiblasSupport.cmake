@@ -1,19 +1,13 @@
 # ------------------------------------------------------------------------------
-# LibLAS+CMake support for CloudCompare
+# LibLAS+CMake support for 
 # ------------------------------------------------------------------------------
 
 OPTION( OPTION_USE_LIBLAS "Build with liblas support" OFF )
 if( ${OPTION_USE_LIBLAS} )
 	# Boost (using static, multithreaded libraries)
-	if ( WIN32 )
-		if ( MSVC )
-			set(Boost_USE_STATIC_LIBS   ON)
-			set(Boost_USE_MULTITHREADED ON)
-		endif() 
-	elseif( APPLE )
-		set(Boost_USE_STATIC_LIBS   ON)
-		set(Boost_USE_MULTITHREADED ON)
-	endif()
+	set(Boost_USE_STATIC_LIBS   ON)
+	set(Boost_USE_MULTITHREADED ON)
+	set(Boost_Cur_VERSION ${Boost_VERSION}) 
 
 	find_package(Boost ${Boost_VERSION})
 
