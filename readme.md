@@ -17,6 +17,10 @@
 1、 针对每项UI | VIEW | IO | MODULE | TOOL涉及到的技术，先寻找并记录可用资源，学习后借鉴引进  
 2、 先实现客户端工具，再扩展为web版
 
+## 历程
+1、 OnlyViewer项目预览图   
+![分页点云数据展示](screenshot/cloudtile.png)
+
 ## VIEW
 ----------------
 1、 学习opengl是怎么实现数据渲染的   
