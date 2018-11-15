@@ -17,7 +17,10 @@ SET(TARGET_COMMON_LIBRARIES
         DCCore
         DCView
         DCGa
+        DCGui
+        DCConsole
 				
 )
 
 ADD_SUBDIRECTORY(QtGuiApplication-OnlyDCView)
+ADD_SUBDIRECTORY(QtGuiApplication-DCView)

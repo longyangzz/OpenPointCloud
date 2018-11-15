@@ -213,8 +213,7 @@ void IWindow::ConfigTitleBar()
 	QString logo = ConfigParser::GetLogoFile();
 	QString logoFile;
 
-	Q_ASSERT(!logo.isEmpty());
-	if (logo.at(0) != QLatin1Char(':'))
+	if (!logo.isEmpty() && logo.at(0) != QLatin1Char(':'))
 	{
 		logoFile = QString("%1%2").arg(m_appDir).arg(logo);
 	}

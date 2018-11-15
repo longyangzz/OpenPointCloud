@@ -11,6 +11,8 @@ FOREACH( mylibfolder
         DCGa
         OpenThreads
       	plugins
+      	DCGui
+      	DCConsole
     )
 
     ADD_SUBDIRECTORY(${mylibfolder})

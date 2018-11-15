@@ -72,7 +72,7 @@ MyClass::MyClass(QWidget *parent, Qt::WindowFlags flags)
 	//gridLayout->addWidget(pNewViewer, 0, 0, 1, 1);
 	m_pMdiArea->addSubWindow(pNewViewer);
 	pNewViewer->showMaximized();
-	loadFile("D:\\data\\TestData\\LOUTI-5.txt", pNewViewer);
+	//loadFile("D:\\data\\TestData\\LOUTI-5.txt", pNewViewer);
 }
 
 MyClass::~MyClass()

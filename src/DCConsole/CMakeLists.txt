@@ -1,9 +1,9 @@
 
 IF(DYNAMIC_OpenPointCloud)
-    ADD_DEFINITIONS(-DDCGUI_LIB)
+    ADD_DEFINITIONS(-DDCCONSOLE_LIB)
 ENDIF()
 
-SET(LIB_NAME DCGui)
+SET(LIB_NAME DCConsole)
 SET(HEADER_PATH ${OpenPointCloud_SOURCE_DIR}/src/${LIB_NAME})
 
 SET(SOURCES_H
@@ -11,18 +11,13 @@ SET(SOURCES_H
 
 )
 
-#QT5_WRAP_CPP( SOURCES_H_MOC ${SOURCES_H} OPTIONS "-f" )
-
-file( GLOB ui_list *.ui impl/*.ui)
-qt5_wrap_ui( generated_ui_list ${ui_list} )
+QT5_WRAP_CPP( SOURCES_H_MOC ${SOURCES_H} OPTIONS "-f" )
+#qt5_wrap_ui( generated_ui_list ${ui_list} )
 #qt5_add_resources( generated_qrc_list ${qrc_list} )
 
 ## method 2
 file( GLOB header_list *.h  impl/*.hxx)
-SET(TARGET_H 
-	${header_list}
-	${generated_ui_list}
-)
+SET(TARGET_H ${header_list})
 
 
 file( GLOB cpp_list *.cpp impl/*.cpp impl/*.cxx )
@@ -43,7 +38,6 @@ SET(TARGET_LIBRARIES
     Qt5::Core
 	Qt5::Gui 
 	Qt5::Widgets 
-	Qt5::Sql
 	DCCore
 )
 

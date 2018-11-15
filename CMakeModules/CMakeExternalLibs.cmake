@@ -20,6 +20,7 @@ find_package(Qt5Concurrent REQUIRED)
 find_package(Qt5OpenGL REQUIRED)
 find_package(Qt5OpenGLExtensions REQUIRED)
 find_package(Qt5Svg REQUIRED)
+find_package(Qt5Sql REQUIRED)
 
 # in the case no Qt5Config.cmake file could be found, cmake will explicitly ask the user for the QT5_DIR containing it!
 # thus no need to keep additional variables and checks
