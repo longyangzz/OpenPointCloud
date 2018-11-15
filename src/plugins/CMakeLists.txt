@@ -12,6 +12,8 @@ SET(TARGET_DEFAULT_LABEL_PREFIX "IO")
 #  selfdefine loader plugins
 #
 ADD_SUBDIRECTORY(IO/PdbIO)
+ADD_SUBDIRECTORY(IO/AsciiIO)
+
 
 
 
