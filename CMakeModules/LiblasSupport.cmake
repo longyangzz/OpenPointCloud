@@ -7,9 +7,8 @@ if( ${OPTION_USE_LIBLAS} )
 	# Boost (using static, multithreaded libraries)
 	set(Boost_USE_STATIC_LIBS   ON)
 	set(Boost_USE_MULTITHREADED ON)
-	set(Boost_Cur_VERSION ${Boost_VERSION}) 
 
-	find_package(Boost ${Boost_VERSION})
+	find_package(Boost 1.60.0)
 
 	if ( Boost_FOUND AND Boost_PROGRAM_OPTIONS_FOUND )
 		include_directories( ${Boost_INCLUDE_DIRS} )

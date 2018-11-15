@@ -16,11 +16,19 @@ QT5_WRAP_CPP( SOURCES_H_MOC ${SOURCES_H} OPTIONS "-f" )
 #qt5_add_resources( generated_qrc_list ${qrc_list} )
 
 ## method 2
-file( GLOB header_list *.h  impl/*.hxx)
-SET(TARGET_H ${header_list})
+
+file( GLOB headerImpl_list impl/*.hxx impl/*.cxx)
+SOURCE_GROUP(impl FILES ${headerImpl_list} )
+
+file( GLOB header_list *.h impl/*.hxx)
+SET(TARGET_H 
+	${header_list}
+)
 
 
-file( GLOB cpp_list *.cpp impl/*.cpp impl/*.cxx )
+
+
+file( GLOB cpp_list *.cpp impl/*.cxx )
 SET(TARGET_SRC
     ${cpp_list}
     ${SOURCES_H_MOC}

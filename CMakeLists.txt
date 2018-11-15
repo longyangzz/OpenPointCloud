@@ -184,6 +184,45 @@ ENDIF()
 #SET(INSTALL_LIBDIR OpenPointCloud/lib)
 #SET(INSTALL_DOCDIR OpenPointCloud/doc)
 
+
+################################################################################
+# 3rd Party Dependency Stuff
+IF(WIN32 AND NOT ANDROID)
+    INCLUDE(Find3rdPartyDependencies)
+ENDIF()
+
+# Boost C++ Libraries support - required
+message(STATUS "Searching for Boost 1.60 - done")
+
+# Default to using static, multithreaded libraries for
+# linking under MSVC.  This is because we show users how to
+# use boostpro.com installer and install those options when linking
+# on windows in the compilation documentation.
+if(WIN32)
+  if (MSVC)
+    set(Boost_USE_STATIC_LIBS   ON)
+    set(Boost_USE_MULTITHREADED ON)
+  endif(MSVC)
+endif(WIN32)
+
+# glew C++ Libraries support - required
+INCLUDE_DIRECTORIES(
+	${ACTUAL_3RDPARTY_DIR}
+)
+
+
+find_package(Threads)
+find_package(Boost 1.60 COMPONENTS program_options thread system REQUIRED)
+
+if(Boost_FOUND AND Boost_PROGRAM_OPTIONS_FOUND)
+  include_directories(${Boost_INCLUDE_DIRS})
+endif()
+
+# make these available for the user to set.
+mark_as_advanced(CLEAR Boost_INCLUDE_DIR)
+mark_as_advanced(CLEAR Boost_LIBRARY_DIRS)
+link_directories(${Boost_LIBRARY_DIRS})
+
 # Dynamic vs Static Linking
 OPTION(DYNAMIC_OpenPointCloud "Set to ON to build OpenSceneGraph for dynamic linking.  Use OFF for static." ON)
 IF   (DYNAMIC_OpenPointCloud)
@@ -212,10 +251,5 @@ OPTION(BUILD_OpenPointCloud_EXAMPLES "Enable to build OpenPointCloud Examples" O
 # tools
 ADD_SUBDIRECTORY(tools)
 
-################################################################################
-# 3rd Party Dependency Stuff
-IF(WIN32 AND NOT ANDROID)
-    INCLUDE(Find3rdPartyDependencies)
-ENDIF()
 
 
