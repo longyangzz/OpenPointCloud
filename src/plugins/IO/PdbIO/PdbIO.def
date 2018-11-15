@@ -1,4 +1,3 @@
-LIBRARY PdbIO.dll
 
 EXPORTS
 LoadPlugin

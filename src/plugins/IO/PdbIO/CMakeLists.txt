@@ -6,8 +6,9 @@ ENDIF()
 file( GLOB header_list *.h  )
 SET(TARGET_H ${header_list})
 
+file( GLOB cpp_list *.cpp  *.def)
 SET(TARGET_SRC
-    PdbIO.cpp
+    ${cpp_list}
     
 )
 

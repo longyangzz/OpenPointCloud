@@ -13,7 +13,7 @@ SET(TARGET_H
 	${generated_ui_list}
 )
 
-file( GLOB cpp_list *.cpp  )
+file( GLOB cpp_list *.cpp  *.def)
 SET(TARGET_SRC
     ${cpp_list}
     

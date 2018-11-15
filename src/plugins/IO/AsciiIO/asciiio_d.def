@@ -1,5 +1,0 @@
-LIBRARY AsciiIO_d.dll
-
-EXPORTS
-LoadPlugin
-UnloadPlugin
