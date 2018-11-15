@@ -1,0 +1,23 @@
+PROJECT(OpenPointCloud_APPS)
+
+
+SET(OpenPointCloud_APPLICATION_DIR ${PROJECT_SOURCE_DIR})
+
+	
+INCLUDE_DIRECTORIES(
+	${QT_INCLUDE_DIR} 
+	${QT_QTCORE_INCLUDE_DIR} 
+	${ACTUAL_3RDPARTY_DIR}/Eigen3
+)
+
+SET(TARGET_DEFAULT_PREFIX "application_")
+SET(TARGET_DEFAULT_LABEL_PREFIX "Applications")
+SET(TARGET_COMMON_LIBRARIES 
+        Qt5::Core
+        DCCore
+        DCView
+        DCGa
+				
+)
+
+ADD_SUBDIRECTORY(QtGuiApplication-OnlyDCView)

@@ -1,0 +1,5 @@
+LIBRARY Dc_AsciiIO.dll
+
+EXPORTS
+LoadPlugin
+UnloadPlugin

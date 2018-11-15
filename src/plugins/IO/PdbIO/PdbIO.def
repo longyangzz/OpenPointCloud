@@ -1,0 +1,5 @@
+LIBRARY PdbIO.dll
+
+EXPORTS
+LoadPlugin
+UnloadPlugin
