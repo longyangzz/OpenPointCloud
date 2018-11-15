@@ -180,7 +180,7 @@ View::ViewerImpl
 	std::string str = arglist[0].toStdString();
 	char* argv = const_cast<char*>(str.data());
 
-	glutInit(&argc, &argv);
+	
 	
 	m_innerRoot = new DcGp::DcGpEntity("innerRoot");
 

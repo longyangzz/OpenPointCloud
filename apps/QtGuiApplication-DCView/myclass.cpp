@@ -20,6 +20,10 @@
 #include "DCView/Viewer.h"
 #include "Mdiarea.h"
 
+//! DCGa
+#include "DCGa/TrackballManipulator.h"
+#include "DCGa/FlyManipulator.h"
+
 
 MyClass::MyClass(QWidget *parent, Qt::WindowFlags flags)
 	: DCGui::AuxMainWindow(parent, flags)
@@ -64,6 +68,10 @@ MyClass::MyClass(QWidget *parent, Qt::WindowFlags flags)
 	ConfigFinish(this);
 
 	MPViewer::Viewer* pNewViewer = new MPViewer::Viewer(this);
+	//! °²×°ÂþÓÎÆ÷
+	pNewViewer->AddManipulatorHandle(new DCGa::TrackballManipulator("TrackBall"));
+	pNewViewer->AddManipulatorHandle(new DCGa::FlyManipulator("Fly"));
+	pNewViewer->showMaximized();
 	
 	//pNewViewer->setAttribute(Qt::WA_DeleteOnClose);
 
@@ -72,7 +80,7 @@ MyClass::MyClass(QWidget *parent, Qt::WindowFlags flags)
 	//gridLayout->addWidget(pNewViewer, 0, 0, 1, 1);
 	m_pMdiArea->addSubWindow(pNewViewer);
 	pNewViewer->showMaximized();
-	//loadFile("D:\\data\\TestData\\LOUTI-5.txt", pNewViewer);
+	loadFile("D:\\data\\TestData\\LOUTI-5.txt", pNewViewer);
 }
 
 MyClass::~MyClass()

@@ -10,6 +10,9 @@
 
 int main(int argc, char *argv[])
 {
+	//≥ı ºªØfreeglut
+	glutInit(&argc, argv);
+
 	QApplication a(argc, argv);
 
 	//! ÃÌº”dcviewer
