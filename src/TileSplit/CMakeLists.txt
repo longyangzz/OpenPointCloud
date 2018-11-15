@@ -40,12 +40,18 @@ SET(TARGET_LIBRARIES
 	Qt5::Gui 
 	Qt5::Widgets 
 	DCCore
+	${ACTUAL_3RDPARTY_DIR}/boost_1_60_0/lib64-msvc-14.0/libboost_thread-vc140-mt-gd-1_60.lib
+	${ACTUAL_3RDPARTY_DIR}/boost_1_60_0/lib64-msvc-14.0/libboost_system-vc140-mt-gd-1_60.lib
+	${ACTUAL_3RDPARTY_DIR}/boost_1_60_0/lib64-msvc-14.0/libboost_program_options-vc140-mt-gd-1_60.lib
+	
 )
 
 INCLUDE_DIRECTORIES(
 	${QT_INCLUDE_DIR} 
 	${QT_QTCORE_INCLUDE_DIR}
 	${LIBLAS_INCLUDE_DIR}
+	${ACTUAL_3RDPARTY_DIR}
+	${ACTUAL_3RDPARTY_DIR}/boost_1_60_0
 )
 
 SETUP_LIBRARY(${LIB_NAME})
