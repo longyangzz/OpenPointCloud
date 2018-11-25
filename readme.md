@@ -64,6 +64,8 @@ cloudcompare、meshlab、visualiabary、vtk、osg、鬼火、DC-Points
 [osg框架设计](https://stackedboxes.org/2010/05/05/osg-part-2-statesets/)  
 ## cad & gis 
 opencascad 、freecad、qcad、teigha、QGis 
+![qgis Debug编译展示](screenshot/qgisdebug.png)   
+[qgis debug编译]()
 ## UI
 Qt
 ## 线程  
