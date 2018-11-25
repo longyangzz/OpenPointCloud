@@ -22,7 +22,7 @@ https://www.riverbankcomputing.com/news
 https://www.riverbankcomputing.com/static/Downloads/QScintilla/QScintilla_gpl-2.11.dev1811171407.zip  
 4、 qca 源码编译  
 依赖于openssl， openssl从osgeo4w下载，qca使用qca-2.1.3源码编译  
-http://mirrors.shu.edu.cn/kde/ftp/stable/qca/2.1.3/src/qca-2.1.3.tar.xz  
+https://github.com/KDE/qca/releases/tag/v2.1.3     
 # 源码编译  
 通过cmake配置好相关的依赖后，打开vs工程进行编译，由于qgis有大约400个项目，编译时间较慢，  
 本人将所有项目移出后只添加了 qgis_app\qgis_core\qgis_analysis\qgis_gui\ui\这几个项目    
