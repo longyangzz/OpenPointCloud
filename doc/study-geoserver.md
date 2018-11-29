@@ -13,3 +13,5 @@ CREATE EXTENSION fuzzystrmatch;
 -- Enable US Tiger Geocoder
 CREATE EXTENSION postgis_tiger_geocoder;
 ```  
+## postgresql设置远程连接   
+![示例图](../screenshot/postgressql-remote.png)   
