@@ -65,7 +65,7 @@ cloudcompare、meshlab、visualiabary、vtk、osg、鬼火、DC-Points
 ## cad & gis 
 opencascad 、freecad、qcad、teigha、QGis 
 ![qgis Debug编译展示](screenshot/qgisdebug.png)   
-[qgis debug编译](doc/build-qgis.md)
+[qgis debug编译](doc/build-qgis.md)   
 [geoserver/postgressql学习](doc/study-geoserver.md)
 ## UI
 Qt
