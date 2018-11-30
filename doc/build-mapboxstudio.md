@@ -3,5 +3,7 @@
 2、yaml的github路径有变化，修改为https://github.com/springmeyer/js-yaml/tarball/master  
 3、需使用python2.x版本编译    
 4、error MSB4132: 无法识别工具版本“2.0”。可用的工具版本为 "4.0"   
-使用命令：npm install --global --production windows-build-tools    
-          npm config set msvs_version 2012 --global解决   
+使用命令：   
++ npm install --global --production windows-build-tools    
++ npm config set msvs_version 2015 --global  
++ npm install -g node-gyp   
