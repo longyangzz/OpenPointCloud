@@ -7,4 +7,5 @@
 + npm install --global --production windows-build-tools    
 + npm config set msvs_version 2015 --global  
 + npm install -g node-gyp   
-5、 使用npm list 补全缺失的包   
+5、 使用npm list 补全缺失的包  
+![gdal安装](doc/mapbox-gdal.png)   
