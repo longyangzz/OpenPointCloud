@@ -79,5 +79,7 @@ QThreadpool、 boost、[simple thread pool](https://github.com/progschj/ThreadPo
 [lastool](https://rapidlasso.com/)  
 ## 公开数据  
 [dronemapper](https://dronemapper.com/sample_data)  
+## 开源网站统计  
+[开源项目](https://www.jianshu.com/p/1d864d29f6f4?tdsourcetag=s_pcqq_aiomsg)   
 
 
