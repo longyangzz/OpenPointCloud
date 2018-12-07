@@ -63,11 +63,12 @@ osgjs、cesium、optree、threejs、OpenSfM
 cloudcompare、meshlab、visualiabary、vtk、osg、鬼火、DC-Points    
 [osg框架设计](https://stackedboxes.org/2010/05/05/osg-part-2-statesets/)  
 ## cad & gis 
-opencascad 、freecad、qcad、teigha、QGis、mapbox、 openstreetmap、leaflet、mapnit    
+opencascad 、freecad、qcad、librecad、libdxfrw、teigha、QGis、mapbox、 openstreetmap、leaflet、mapnit    
 ![qgis Debug编译展示](screenshot/qgisdebug.png)   
 [qgis debug编译](doc/build-qgis.md)   
 [geoserver/postgressql学习](doc/study-geoserver.md)   
-[mapbox studio class编译](doc/build-mapboxstudio.md)   
+[mapbox studio class编译](doc/build-mapboxstudio.md)  
+[freecad编译](doc/build-freecad.md)   
 ## UI
 Qt
 ## 线程  
