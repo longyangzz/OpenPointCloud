@@ -11,7 +11,7 @@ SET(SOURCES_H
 
 )
 
-QT5_WRAP_CPP( SOURCES_H_MOC ${SOURCES_H} OPTIONS "-f" )
+#QT5_WRAP_CPP( SOURCES_H_MOC ${SOURCES_H} OPTIONS "-f" )
 #qt5_wrap_ui( generated_ui_list ${ui_list} )
 #qt5_add_resources( generated_qrc_list ${qrc_list} )
 
