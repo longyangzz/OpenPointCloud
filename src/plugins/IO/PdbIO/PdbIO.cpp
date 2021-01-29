@@ -109,7 +109,7 @@ void PdbIO::SetBoxInfo(DcGp::PageLodEntity* pointCloud, QString qFilename, bool 
 	if (isRootFile)
 	{
 		//changshu_L0_X0_Y0.txt
-		assioFilename = QString("%1_root\\%2_L0_X0_Y0.pdb").arg(basename).arg(basename);
+		assioFilename = QString("%1\\%2_L0_X0_Y0.pdb").arg(basename).arg(basename);
 	}
 	else
 	{
