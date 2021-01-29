@@ -20,7 +20,7 @@
 ## 历程
 1、 OnlyViewer项目预览图   
 
-![分页点云数据展示](screenshot/lod-cloud.gif)
+![分页点云数据展示](./screenshot/lod-cloud.gif)
 
 ![image-20210129185639796](./screenshot/image-pdbstructure.png)
 
