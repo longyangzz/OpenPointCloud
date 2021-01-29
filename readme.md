@@ -19,7 +19,10 @@
 
 ## 历程
 1、 OnlyViewer项目预览图   
+
 ![分页点云数据展示](screenshot/lod-cloud.gif)
+
+![image-20210129185639796](./screenshot/image-pdbstructure.png)
 
 ## VIEW
 ----------------
@@ -30,6 +33,7 @@
 [初级中级高级GL教程](http://www.opengl-tutorial.org/)   
 2、 矩阵运算库  
 [GLM](https://github.com/g-truc/glm)  实现矩阵运算  
+
 ```cpp
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
