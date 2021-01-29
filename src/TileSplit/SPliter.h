@@ -79,7 +79,7 @@ namespace DC
 			~SPliter();
 
 			//
-			QString GetSuffix() {return m_suffix;}
+			QString GetSuffix() {return "pdb";}
 
 			//读取文件并确定边界盒范围
 			virtual	ErrorType GetBoundBoxByFile(const QString& inFile, BoundBox& outBox, unsigned simple = 1) = 0;
