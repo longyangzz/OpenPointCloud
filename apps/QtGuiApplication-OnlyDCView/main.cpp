@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	//! 添加dcviewer
 	//! 读取传入数据
 	//QString fileName = "D:\\data\\TestData\\LOUTI-5.txt";
-	QString fileName = "D:\\data\\selfpdb\\CangSu_JiZai.pdb";
+	QString fileName = "D:\\data\\selfpdb\\CangSuJiZai.pdb";
 	//QString fileName = "D:\\data\\bieshu-pdb\\bieshu.pdb";
 
 
