@@ -75,6 +75,9 @@ ErrorType GridSplitStrategy::Spit(const QString& inFile, const LevelType& level,
 		//写出边界盒文件
 		spliter->WriteBoxTofile(m_inFile, m_level, outDir);
 		
+		//拷贝两个文件到outDir
+
+
 		return writeSuccess;
 	}
 	return hasBound;
