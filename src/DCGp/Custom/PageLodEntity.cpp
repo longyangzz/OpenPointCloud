@@ -39,6 +39,10 @@ PageLodEntity::PageLodEntity(QString name)
 
 PageLodEntity::~PageLodEntity()
 {
+	//if (m_databaseRequest) 
+	{
+
+	}
 }
 
 void PageLodEntity::Accept(DCUtil::AbstractEntityVisitor& nv)
@@ -65,6 +69,24 @@ void PageLodEntity::Traverse(DCUtil::AbstractEntityVisitor& nv)
 	//! 边界盒与视点的距离
 	double required_range = nv.GetDistanceToViewPoint(m_pageBoxCenter, true);
 
+	//判断已经加载的数据节点是否有需要删除的，则delete
+	bool needToUnloadChild = false;
+	if (m_range.first < required_range && required_range > m_range.second)
+	{
+		if (!GetChildren().empty())
+		{
+			int childNum = GetChildren().size();
+			for (int i = 0; i < childNum; ++i) {
+				RemoveChild(i, true);
+			}
+			//清除dbrequest
+			if ( m_perRangeDataList.size() ) {
+				m_perRangeDataList[0].m_databaseRequest = nullptr;
+			}
+
+		}
+	}
+
 	bool needToLoadChild = false;
 	for (unsigned int i = 0; i < m_perRangeDataList.size(); ++i)
 	{
@@ -82,10 +104,6 @@ void PageLodEntity::Traverse(DCUtil::AbstractEntityVisitor& nv)
 		}
 	}
 
-	//! 子节点个数
-	int num = GetChildrenNumber();
-
-
 	if (needToLoadChild)
 	{
 		//! 需要加载数据
@@ -102,27 +120,7 @@ void PageLodEntity::Traverse(DCUtil::AbstractEntityVisitor& nv)
 		
 	}
 
-	//! 子节点个数
-	//int num = GetChildrenNumber();
-
-
-	//if (!num)
-	//{
-	//	//! 需要加载数据
-	//	//DCUtil::DatabaseRequest* dbRequest = new DCUtil::DatabaseRequest(fileName, this);
-	//	if (!m_perRangeDataList.empty())
-	//	{
-	//		nv.GetDatabaseRequestHandler()->RequestNodeFile(fileName, this, m_perRangeDataList[0].m_databaseRequest);
-	//	}
-
-	//}
-	//else
-	//{
-	//	//!数据已经加载过了，往下遍历
-	//	DcGp::DcGpEntity* group = GetChild(0);
-	//	group->Accept(nv);
-	//}
-
+	
 }
 
 void PageLodEntity::FastDrawMyselfOnly(DcGpDrawContext& context)
