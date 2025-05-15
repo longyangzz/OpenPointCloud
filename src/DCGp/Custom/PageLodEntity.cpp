@@ -79,9 +79,13 @@ void PageLodEntity::Traverse(DCUtil::AbstractEntityVisitor& nv)
 			for (int i = 0; i < childNum; ++i) {
 				RemoveChild(i, true);
 			}
-			//清除dbrequest
+			//清除dbrequest，先标记状态，在队列中删除
 			if ( m_perRangeDataList.size() ) {
-				m_perRangeDataList[0].m_databaseRequest = nullptr;
+				//static_cast<DCUtil::DatabasePage* >(m_updateVisitor->GetDatabaseRequestHandler())
+				
+				//nv.GetDatabaseRequestHandler()->RequestDeleteNodeFile(m_perRangeDataList[0].m_databaseRequest);
+				//delete m_perRangeDataList[0].m_databaseRequest.get();
+				//m_perRangeDataList[0].m_databaseRequest = nullptr;
 			}
 
 		}

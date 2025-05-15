@@ -160,6 +160,9 @@ void DatabasePage::UpdateScene()
 	// 线程保护中
 	m_dataToMergeQueue->swap(localFileLoadedList);
 
+	//删除无用的节点
+
+
 	for (QList<DatabaseRequest* >::iterator itr = localFileLoadedList.begin();
 		itr != localFileLoadedList.end();
 		++itr)
@@ -196,7 +199,7 @@ void DatabasePage::RequestNodeFile(const QString& fileName, DcGp::DcGpEntity* pa
 	//! 既然已经添加到队列中了，就要判断一下是否在队列中已经没数据线程加载完成了。
 	if (dbRequest)
 	{
-		bool reQueue = false;   //!重新放入队列中
+		bool reQueue = true;   //!重新放入队列中
 
 		//! 数据请求锁
 		OpenThreads::ScopedLock<OpenThreads::Mutex> drLock(m_dr_mutex);
@@ -264,6 +267,40 @@ void DatabasePage::RequestNodeFile(const QString& fileName, DcGp::DcGpEntity* pa
 			
 		}
 	}
+}
+
+//节点遍历时候，标记删除状态
+void DatabasePage::RequestDeleteNodeFile(boost::shared_ptr<DatabaseRequest>& dbRequest)
+{
+	////! 是否数据已读，如果找到已有加载请求，则foundEntry为true
+	//bool foundEntry = false;
+
+
+	////!通过判断传过来的dbRequest参数，dbRequest存在，则说明已经添加到队列中了
+	////! 既然已经添加到队列中了，就要判断一下是否在队列中已经没数据线程加载完成了。
+	//if (dbRequest)
+	//{
+	//							//! 数据请求锁
+	//	OpenThreads::ScopedLock<OpenThreads::Mutex> drLock(m_dr_mutex);
+
+	//	{
+	//		foundEntry = true;
+
+	//		//!判断是否在对列中已被加载
+	//		OpenThreads::ScopedLock<OpenThreads::Mutex> lock(m_fileRequestQueue->_requestMutex);
+
+
+	//		for (int i = 0; i < m_fileRequestQueue->_requestList.size(); ++i) {
+	//			if (m_fileRequestQueue->_requestList[i]->m_fileName.remove("/").remove("\\") == dbRequest->m_fileName.remove("/").remove("\\")) {
+	//				m_fileRequestQueue->_requestList.removeAt(i);
+	//			}
+	//		}
+	//		m_fileRequestQueue->updateBlock();
+	//	}
+
+	//}
+
+	
 }
 
 

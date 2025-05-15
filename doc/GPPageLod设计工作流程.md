@@ -14,3 +14,14 @@ _pager->m_dataToMergeQueue->_requestList.push_back(request);目的是为了在�
 
 
 
+DatabasePage通过一个独立的线程管理两个关键变量:
+
+RequestQueue*			m_fileRequestQueue;   //！两个线程之间文件共享
+		RequestQueue*			m_dataToMergeQueue;   //！两个线程之前数据加载结果共享
+
+接收外部发过来的加载请求，存储到m_fileRequestQueue。线程run中不停从m_fileRequestQueue中读取一个请求，
+
+并将读取后的结果存储到m_dataToMergeQueue中。
+
+渲染线程中通过从m_dataToMergeQueue取出数据进行渲染。
+

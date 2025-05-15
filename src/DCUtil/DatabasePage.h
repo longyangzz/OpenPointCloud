@@ -26,6 +26,13 @@ namespace DCUtil
 
 		}
 
+		~DatabaseRequest()
+		{
+			m_loadedNode = nullptr;
+			m_parentNode = nullptr;
+			m_valid = false;
+		}
+
 		DatabaseRequest(QString fileName, DcGp::DcGpEntity* parentNode)
 			: m_loadedNode(nullptr)
 			, m_valid(false)
@@ -56,7 +63,7 @@ namespace DCUtil
 
 		virtual ~DatabaseRequestHandler() {}
 		virtual void RequestNodeFile(const QString& fileName, DcGp::DcGpEntity* parNode, boost::shared_ptr<DatabaseRequest>& dbRequest) = 0;
-
+		virtual void RequestDeleteNodeFile(boost::shared_ptr<DatabaseRequest>& dbRequest) = 0;
 	protected:
 		
 	};
@@ -70,7 +77,8 @@ namespace DCUtil
 		~DatabasePage();
 
 		virtual void RequestNodeFile(const QString& fileName, DcGp::DcGpEntity* parNode, boost::shared_ptr<DatabaseRequest>& dbRequest);
-
+		virtual void RequestDeleteNodeFile(boost::shared_ptr<DatabaseRequest>& dbRequest);
+		
 		void UpdateScene();
 
 		class MPUTIL_EXPORT DatabaseThread : public OpenThreads::Thread
